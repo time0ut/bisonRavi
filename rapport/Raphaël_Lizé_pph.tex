@@ -1,0 +1,121 @@
+% Projet Personnel en Humanités: Boris Vian - Raphaël Lizé
+
+\documentclass[twoside]{book}
+\usepackage{hyperref}
+
+
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{placeins}
+
+
+% Unicode encoding  
+\usepackage[utf8x]{inputenc}
+
+
+% Colorfull Text
+\usepackage{xcolor}
+
+
+% \euro
+\usepackage{eurosym}
+
+
+% Language settings:
+\usepackage[francais]{babel}
+
+\usepackage[T1]{fontenc}
+
+
+% Tables
+\usepackage{array}
+\usepackage{longtable}
+
+
+% Hyperrefferences  
+\usepackage{hyperref}
+
+
+% Font settings:
+\usepackage{charter}
+
+
+\title{Projet Personnel en Humanités: Boris Vian}
+\author{Raphaël Lizé}
+% Page layout settings
+\usepackage{geometry}
+\geometry{
+	a4paper,  % 21 x 29,7 cm
+%	body={160mm,240mm},
+%	left=30mm, 
+%	top=25mm,
+%	headheight=7mm, 
+%	headsep=4mm,
+%	marginparsep=4mm,
+%	marginparwidth=27mm
+}
+
+
+% Spacing:
+\usepackage{setspace}
+
+
+% Headers and footers:
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+          \fancyhf{}
+          \fancyfoot[LE,RO]{\textcolor[gray]{0.3}{\thepage}}
+          % Rulers width
+          \renewcommand{\footrulewidth}{.3pt}
+          \renewcommand{\headrulewidth}{.3pt}
+\fancyfoot[LO,RE]{\textcolor[gray]{0.3}{Raphaël Lizé}}
+\fancyfoot[CO,CE]{\textcolor[gray]{0.3}{Projet Personnel en Humanités: Boris Vian}}
+
+
+% Vars & functs
+% Paths
+\newcommand\PIXPATH{./docs/pics}
+\newcommand\SRCPATH{./docs/src}
+
+% Object:
+\newcommand\Object{}
+
+% End of line(forced):
+\newcommand\el{\hfill\\}
+
+% Lists design:
+\renewcommand{\labelitemi}{$\diamond$}
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+
+
+% Begining of the document
+\begin{document}
+
+	%Including all the files:
+
+    % Fichier ./docs/tex/0.premiere_page.tex
+
+% Front Page 
+
+% Title:
+\maketitle
+
+\thispagestyle{empty}
+
+\vfill
+
+% Picture
+\begin{center}
+    \includegraphics[scale=0.50]{\PIXPATH/frontPage}
+\end{center}
+
+\pagebreak
+
+% Table of contents 
+\tableofcontents
+\vfill
+\pagebreak
+
+% The end
+\end{document}
+
