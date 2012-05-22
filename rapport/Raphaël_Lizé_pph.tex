@@ -1,4 +1,4 @@
-% Projet Personnel en Humanités: Boris Vian - Raphaël Lizé
+% Boris Vian - Raphaël Lizé
 
 \documentclass[twoside]{book}
 \usepackage{hyperref}
@@ -37,10 +37,10 @@
 
 
 % Font settings:
-\usepackage{charter}
+\usepackage{kpfonts}
 
 
-\title{Projet Personnel en Humanités: Boris Vian}
+\title{Boris Vian}
 \author{Raphaël Lizé}
 % Page layout settings
 \usepackage{geometry}
@@ -69,7 +69,7 @@
           \renewcommand{\footrulewidth}{.3pt}
           \renewcommand{\headrulewidth}{.3pt}
 \fancyfoot[LO,RE]{\textcolor[gray]{0.3}{Raphaël Lizé}}
-\fancyfoot[CO,CE]{\textcolor[gray]{0.3}{Projet Personnel en Humanités: Boris Vian}}
+\fancyfoot[CO,CE]{\textcolor[gray]{0.3}{Boris Vian}}
 
 
 % Vars & functs
@@ -96,25 +96,50 @@
     % Fichier ./docs/tex/0.premiere_page.tex
 
 % Front Page 
+\thispagestyle{empty}
 
 % Title:
 \maketitle
 
-\thispagestyle{empty}
-
-\vfill
-
 % Picture
 \begin{center}
-    \includegraphics[scale=0.50]{\PIXPATH/frontPage}
+    \includegraphics[height=3cm]{\PIXPATH/frontPage}
 \end{center}
 
+\vfill
 \pagebreak
 
 % Table of contents 
 \tableofcontents
 \vfill
 \pagebreak
+
+    % Fichier ./docs/tex/1.partie1.tex
+
+% Partie 1: présentation du personnage
+
+\section{Boris Vian, Bison Ravi, et tout leurs amis}
+
+% Intro
+
+Il est difficile de parler de Boris Vian. Peut-être parce qu'il
+est difficile de lui coller une seule étiquette. Un seul nom,
+même. «Boris Vian» pour l'état civil, «Bison Ravi» -- anagramme
+de «Boris Vian» pour les proches, «Vernom Sullivan» pour certains
+livres, et des dizaines d'autres pseudonymes en tant que chroniqueur.
+% TODO: lien liste des pseudonymes (annexes ?)
+Mais pour évoquer le personnage, on peut déjà s'intéresser à l'Histoire,
+et à son histoire.
+% TODO: Annexe frise chrono ?
+
+\subsection{Contexte historique}
+
+
+\subsection{Famille et éducation}
+
+
+\subsection{Vie publique, vie privée}
+
 
 % The end
 \end{document}
