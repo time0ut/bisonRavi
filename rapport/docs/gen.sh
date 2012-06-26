@@ -10,7 +10,7 @@ echo "% $TITLE - $AUTHOR" > $FILE
 
 # Document class
 echo "
-\documentclass[twoside]{$DCLASS}
+\documentclass[$FONTSIZE,twoside]{$DCLASS}
 \usepackage{hyperref}
 " >> $FILE
 
@@ -64,6 +64,12 @@ echo "
 \usepackage{longtable}
 " >> ${FILE}
 
+# Lettrines
+echo "
+% Lettrines
+\usepackage{lettrine}
+" >> ${FILE}
+
 # Hyperrefferences
 echo "
 % Hyperrefferences  
@@ -103,10 +109,17 @@ echo "
 #\usepackage{minted}
 #" >> $FILE
 
+# Epigraphs
+echo "
+% Epigraphs:
+\usepackage{epigraph}
+" >> $FILE
+
 # Spacing
 echo "
 % Spacing:
 \usepackage{setspace}
+\onehalfspacing
 " >> $FILE
 
 # Headers and footers
@@ -114,15 +127,15 @@ echo "
 # milieu: auteur+titre
 echo "
 % Headers and footers:
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-          \fancyhf{}
-          \fancyfoot[LE,RO]{\textcolor[gray]{0.3}{\thepage}}
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%          \fancyhf{}
+%          \fancyfoot[LE,RO]{\textcolor[gray]{0.3}{\thepage}}
           % Rulers width
-          \renewcommand{\footrulewidth}{$FRULE}
-          \renewcommand{\headrulewidth}{$HRULE}
-\fancyfoot[LO,RE]{\textcolor[gray]{0.3}{$AUTHOR}}
-\fancyfoot[CO,CE]{\textcolor[gray]{0.3}{$TITLE}}
+%          \renewcommand{\footrulewidth}{$FRULE}
+%          \renewcommand{\headrulewidth}{$HRULE}
+% \fancyfoot[LO,RE]{\textcolor[gray]{0.3}{$AUTHOR}}
+% \fancyfoot[CO,CE]{\textcolor[gray]{0.3}{$TITLE}}
 " >> ${FILE}
 
 # (Re)define stuff
@@ -141,12 +154,17 @@ echo "
 % Lists design:
 \renewcommand{\labelitemi}{$\diamond$}
 \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+
+% Useful shortcuts
+\newcommand{\BV}{{Boris \bsc{Vian}}}
+
 " >> ${FILE}
 
 # Begining of document
 echo "
 % Begining of the document
 \begin{document}
+
 " >> ${FILE}
 
 # Main part

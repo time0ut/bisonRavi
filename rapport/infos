@@ -1,9 +1,9 @@
 # Insert infos here:
-TITLE="Boris Vian"
+TITLE="Boris \sc{Vian}"
 
-AUTHOR="Raphaël Lizé"
+AUTHOR="Raphaël \sc{Lizé}"
 
-FILE=${AUTHOR// /_}"_pph"
+FILE="BorisVian"
 
 LANG="francais"
 # For hyphenation and other language dependant stuff
@@ -17,6 +17,9 @@ FONT="kpfonts"
 
 # Char encoding (utf-8/latin1)
 CENC="utf-8"
+
+# Font size
+FONTSIZE="12pt"
 
 # Document class (article, letter, report)
 DCLASS="book"
@@ -32,5 +35,3 @@ DOCSPATH=./docs
 TEXPATH=${DOCSPATH}/tex
 # Pictures files
 PIXPATH=${DOCSPATH}/pics
-# Source code files
-SRCPATH=${DOCSPATH}/src
