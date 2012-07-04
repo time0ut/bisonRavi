@@ -11,14 +11,22 @@ echo "% $TITLE - $AUTHOR" > $FILE
 # Document class
 echo "
 \documentclass[$FONTSIZE,twoside]{$DCLASS}
-\usepackage{hyperref}
+\usepackage{multicol}
+" >> $FILE
+
+# Verses
+echo "
+% Verse:
+\usepackage{verse}
 " >> $FILE
 
 # To include pictures
 echo "
 \usepackage{graphicx}
-\usepackage{subfig}
+\usepackage{wrapfig,subfig}
 \usepackage{placeins}
+\usepackage{sidecap}
+\usepackage{caption}
 " >> $FILE
 
 # Encoding settings
@@ -122,6 +130,12 @@ echo "
 \onehalfspacing
 " >> $FILE
 
+# Hyper references
+echo "
+% Hyper references:
+\usepackage{hyperref}
+" >> $FILE
+
 # Headers and footers
 # bas-droite/basgauche: page
 # milieu: auteur+titre
@@ -157,11 +171,36 @@ echo "
 
 % Useful shortcuts
 \newcommand{\BV}{{Boris \bsc{Vian}}}
+\newcommand{\nb}{\oldstylenums}
 
 " >> ${FILE}
 
 # Begining of document
 echo "
+% Enclose everything in an \AtBeginDocument{}
+\AtBeginDocument{%
+  % Make \section{} use text figures
+  \let\myTheSection\thesection
+  \renewcommand{\thesection}{\oldstylenums{\myTheSection}}
+  \let\myTheSubSection\thesubsection
+  \renewcommand{\thesubsection}{\oldstylenums{\myTheSubSection}}
+  \let\myTheSubSubSection\thesubsubsection
+  \renewcommand{\thesubsubsection}{\oldstylenums{\myTheSubSubSection}}
+ 
+  % Make \paragraph{} use text figures
+  \let\myTheParagraph\theparagraph
+  \renewcommand{\theparagraph}{\oldstylenums{\myTheParagraph}}
+ 
+  % Make the page numbers in text figures
+  \let\myThePage\thepage
+  \renewcommand{\thepage}{\oldstylenums{\myThePage}}
+
+  \let\myTheFig\thefigure
+  \renewcommand{\thefigure}{\oldstylenums{\myTheFig}}
+  \let\myTheChapter\thechapter
+  \renewcommand{\thechapter}{\oldstylenums{\myTheChapter}}
+}
+
 % Begining of the document
 \begin{document}
 

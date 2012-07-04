@@ -35,3 +35,6 @@ DOCSPATH=./docs
 TEXPATH=${DOCSPATH}/tex
 # Pictures files
 PIXPATH=${DOCSPATH}/pics
+# Source files
+SRCPATH=${DOCSPATH}/src
+
