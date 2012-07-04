@@ -1,7 +1,7 @@
 # Insert infos here:
-TITLE="Boris \sc{Vian}"
+TITLE="Boris \bsc{Vian}"
 
-AUTHOR="Raphaël \sc{Lizé}"
+AUTHOR="Raphaël \bsc{Lizé}"
 
 FILE="BorisVian"
 
