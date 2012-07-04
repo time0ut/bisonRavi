@@ -23,10 +23,10 @@ echo "
 # To include pictures
 echo "
 \usepackage{graphicx}
-\usepackage{wrapfig,subfig}
+\usepackage{wrapfig}%,subfig}
 \usepackage{placeins}
 \usepackage{sidecap}
-\usepackage{caption}
+\usepackage{subcaption}
 " >> $FILE
 
 # Encoding settings
@@ -111,11 +111,11 @@ echo "
 }
 " >> $FILE
 
-## Listings
-#echo "
-#% Listings
-#\usepackage{minted}
-#" >> $FILE
+# Listings
+echo "
+% Strike/underline
+%\usepackage{ulem}
+" >> $FILE
 
 # Epigraphs
 echo "
