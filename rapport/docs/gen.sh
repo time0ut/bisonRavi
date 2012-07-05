@@ -22,7 +22,7 @@ echo "
 
 # To include pictures
 echo "
-\usepackage{graphicx}
+\usepackage{graphicx, tikz}
 \usepackage{wrapfig}%,subfig}
 \usepackage{placeins}
 \usepackage{sidecap}
@@ -141,7 +141,7 @@ echo "
 # milieu: auteur+titre
 echo "
 % Headers and footers:
-%\usepackage{fancyhdr}
+\usepackage{fancyhdr}
 %\pagestyle{fancy}
 %          \fancyhf{}
 %          \fancyfoot[LE,RO]{\textcolor[gray]{0.3}{\thepage}}
@@ -200,6 +200,15 @@ echo "
   \let\myTheChapter\thechapter
   \renewcommand{\thechapter}{\oldstylenums{\myTheChapter}}
 }
+
+
+%\renewcommand{\cleardoublepage}{% redéfinition de la commande
+%\clearpage\ifodd\c@page\else
+%\hbox{}
+%\vspace*{\fill}
+%\thispagestyle{empty}% ligne ajoutée
+%\newpage
+%\fi}
 
 % Begining of the document
 \begin{document}

@@ -3,13 +3,33 @@
 
 \date{\nb{21} gidouille \nb{139}}
 % Title:
-\maketitle
+%\maketitle
 
+{
+\input ArtNouvc.fd
+\newcommand*\initfamily{\usefont{U}{ArtNouvc}{xl}{n}}
+\initfamily
+
+\begin{tikzpicture}[scale=2,transform shape]
+\draw (0,0) node (b) {\Huge B\,O\,R\,I\,S V\,I\,A\,N};
+\end{tikzpicture}
+}
+
+
+{\Large L'homme aux mille vies en une. Voire plus.}
+\vskip 5cm
+{\Large Raphaël \bsc{Lizé}, \nb{5}IF}
+
+{\large Avant propos de M. Raphaël \bsc{Lizé}}
+
+\vfill
 % Picture
-%\begin{center}
-%    \includegraphics[height=3cm]{\PIXPATH/frontPage}
-%\end{center}
-
+\begin{center}
+    \includegraphics[]{\PIXPATH/croco2}
+\end{center}
+\vfill
+\hfill{\Large Le \nb{21} gidouille \nb{139}}\\
+{\large Tuteur: M. Lionel \bsc{Brunie}}
 %\vfill
 %\pagebreak
 
